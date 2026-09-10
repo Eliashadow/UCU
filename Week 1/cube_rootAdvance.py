@@ -1,0 +1,1 @@
+# Program for calculating all solutions of cubic
