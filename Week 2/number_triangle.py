@@ -1,3 +1,4 @@
+# Program for creating triangle with numbers
 first_num = int(input())
 height = int(input())
 
