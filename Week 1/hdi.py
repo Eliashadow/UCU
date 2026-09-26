@@ -46,5 +46,3 @@ print(f'GNI index for {country} is {gni_index:.4f}.')
 print(f'HDI for {country} is {hdi_index:.3f}.')
 print(f'HDI for {country} is high: {0.7<=hdi_index}.')
 print(f'The worst index for {country} is {worst_index:.4f}.')
-
-

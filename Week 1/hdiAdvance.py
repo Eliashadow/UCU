@@ -35,8 +35,6 @@ education_index = (expect_years_index + mean_years_index) / 2
 gni_index = (log(gni_value)- log(MIN_GNI)) / (log(MAX_GNI) - log(MIN_GNI))
 
 
-worst_index = min(health_index, education_index, gni_index)
-
 hdi_index = cbrt(health_index * education_index * gni_index)
 
 
@@ -45,6 +43,6 @@ print(f'Education index for {country} is {education_index:.4f}.')
 print(f'GNI index for {country} is {gni_index:.4f}.')
 print(f'HDI for {country} is {hdi_index:.3f}.')
 print(f'HDI for {country} is high: {0.7<=hdi_index}.')
-print(f'The worst index for {country} is {worst_index == education_index and "Education index" or  worst_index == health_index and "Life expectancy index" or worst_index == gni_index and "GNI index"}.')
+print(f'The worst index for {country} is {min((health_index, "Life expectancy index"), (education_index, "Education index"), (gni_index, "GNI index"))[1]}.')
 
 
